@@ -1,0 +1,112 @@
+body {
+  font-family:"Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+  // font-family: 'Varela Round';
+}
+
+.page-container {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+// ------ Intro ------
+.intro {
+  margin-bottom: 25vh;
+  margin-top: 32vh;
+  text-align: center;
+  padding: 0 8vw;
+
+  @media (min-width: 768px) {
+    margin-bottom: 28vh;
+    margin-top: 23vh;
+    padding: 0 15px;
+  }
+}
+
+.intro > h1 {
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 1.3em;
+
+  @media (min-width: 768px) { font-size: 3.33vw; }
+}
+
+.intro-text-top { margin-bottom: 3rem; }
+
+// ------ Work ------
+.work-card {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  text-align: center;
+
+  // @media (min-width: 768px) { height: 70vh; }
+
+
+  &--stock { background-color: #F9CA00; }
+  &--ico { background-color: #00ACED; }
+
+  &:hover, &:active {
+    .work-card-title {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .work-card-icon {
+      animation: scale 1s linear;
+      opacity: 0.3;
+      transition: opacity 0.5s ease-in-out;
+    }
+  }
+}
+
+.work-card-icon {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  height: 100%;
+  width: 25%;
+  fill: #fff;
+
+  @media (min-width: 768px) {
+    width: 20%;
+  }
+}
+
+.work-card-title {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 1.5em;
+  font-weight: 900;
+
+  @media (min-width: 768px) {
+    font-size: 2.8vw;
+  }
+}
+
+// ------ About ------
+.about {
+  margin-top: 23vh;
+  margin-bottom: 28vh;
+  text-align: center;
+}
+
+// ------ Footer ------
+.footer {
+  text-align: center;
+  margin: 4.7rem 0;
+  font-weight: 100;
+}
+
+// ------ Animations ------
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes scale {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.15);}
+  100% {transform: scale(1);}
+}
