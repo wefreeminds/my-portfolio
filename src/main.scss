@@ -39,6 +39,39 @@ a {
 
 .intro-text-top { margin-bottom: 3rem; }
 
+.intro-eth {
+  transform: translate(-50%, -50%) rotate(-15deg);
+  left: 50%;
+  position: absolute;
+  color: #333;
+  font-size: 0.9rem;
+  margin-top: 5rem;
+  font-weight: 900;
+
+  @media (min-width: 768px) {
+    transform: translate(0%, -26%) rotate(-23deg);
+    margin-top: 0rem;
+  }
+
+}
+.intro-eth > p {
+  margin-bottom: 0.8rem;
+}
+
+.intro-eth-name {
+}
+
+// .intro-eth {
+//   overflow: hidden;
+//   // width: 100%;
+//   width: 400px;
+//   animation: type 4s steps(60, end);
+// }
+
+// @keyframes type{
+//   from { width: 0; }
+// }
+
 // ------ Work ------
 .work-card {
   align-items: center;

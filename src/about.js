@@ -13,7 +13,7 @@ export const About = (props) => {
       <div className="col-md-6 about">
         <h1>About Me.</h1>
         <div className="about-profile">
-          <img src={IMGProfile} alt="profile" class="about-profile-img" />
+          <img src={IMGProfile} alt="profile" className="about-profile-img" />
         </div>
         <p>Hello! I am Nick Zbiegien. I am a software engineer with a master of engineering
           in computer science and
