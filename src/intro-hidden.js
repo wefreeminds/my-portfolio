@@ -1,50 +1,72 @@
 import React, { useState, useEffect } from 'react'
 import Web3 from 'web3'
+import { forkJoin, from, of } from 'rxjs'
+import { ajax } from 'rxjs/ajax'
+import { map, catchError } from 'rxjs/operators'
 
 export const IntroHidden = (props) => {
-
-  const [ethAddress, setEthAddress] = useState(null)
-  const [flag, setFlag] = useState(null)
+  const [state, setState] = useState({
+    isComplete: false,
+    ethAddress: null,
+    flagEmoji: null,
+    city: null,
+  })
 
   useEffect(() => {
-    loadWeb3()
-    loadFlag()
+    loadData()
   }, [])
 
-  const loadWeb3 = async () => {
-    if (window.ethereum) {
-      window.ethereum.autoRefreshOnNetworkChange = false
-      const web3 = window.web3 = new Web3(window.ethereum)
-      await window.ethereum.enable()
-      const accounts = await web3.eth.getAccounts()
-      setEthAddress(accounts[0])
-    } else if (window.web3) {
-      window.web3 = new Web3(window.web3.currentProvider)
-    } else {
-      //Non-Ethereum browser
-    }
+  const loadData = () => {
+    sub$.subscribe(({ ethAddress, localization, contriesList }) => {
+      const countryCode = localization.countryCode
+      const city = localization.city
+      const flagEmoji = contriesList[countryCode] && contriesList[countryCode].emoji
+      setState({ ethAddress, flagEmoji, city, isComplete: true })
+    })
   }
 
-  const loadFlag = async () => {
-    const localization = await fetch('http://ip-api.com/json')
-    const data = await localization.json()
-    const countryCode = data.countryCode
-
-    const flagResponse = await fetch('https://unpkg.com/country-flag-emoji-json@1.0.2/json/flag-emojis-by-code.json')
-    const flagData = await flagResponse.json()
-    const flagEmoji = flagData[countryCode].emoji
-    setFlag(flagEmoji)
-  }
-
-  const show = ethAddress && flag
-
+  const { isComplete, ethAddress, flagEmoji, city } = state
   return (
-    show &&
+    isComplete &&
     <div className="intro-eth">
-      <p>Nice to meet you</p>
+      <p>It's nice meeting you!</p>
       <p className="intro-eth-name">{ethAddress}</p>
-      <span>{flag}</span>
+      <p>How's the weather in {city} {flagEmoji}?</p>
     </div>
   )
 }
 
+const getEthAddress = () => {
+  if (window.ethereum) {
+    // Modern dapp browsers
+    window.ethereum.autoRefreshOnNetworkChange = false
+    window.web3 = new Web3(window.ethereum)
+    try {
+      return window.ethereum.enable()
+    } catch (err) { }
+  } else if (window.web3) {
+    // Legacy dapp browsers
+    const web3 = new Web3(window.web3.currentProvider)
+    window.web3 = web3
+    return web3.eth.getAccounts()
+  } else {
+    // Non-dapp browsers
+    return of('')
+  }
+}
+
+const fetchLocalization = ajax.getJSON('http://ip-api.com/json').pipe(
+  catchError(err => of()),
+)
+
+const fetchCountriesList = ajax.getJSON('https://unpkg.com/country-flag-emoji-json@1.0.2/json/flag-emojis-by-code.json').pipe(
+  catchError(err => of()),
+)
+
+const fetchEthAddress = from(getEthAddress())
+
+const sub$ = forkJoin({
+  ethAddress: fetchEthAddress,
+  localization: fetchLocalization,
+  contriesList: fetchCountriesList,
+})

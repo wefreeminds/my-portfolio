@@ -47,6 +47,7 @@ a {
   font-size: 0.9rem;
   margin-top: 5rem;
   font-weight: 900;
+  animation: opa 8s;
 
   @media (min-width: 768px) {
     transform: translate(0%, -26%) rotate(-23deg);
@@ -55,22 +56,24 @@ a {
 
 }
 .intro-eth > p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-eth > span {
+  display: inline-block;
 }
 
 .intro-eth-name {
 }
 
-// .intro-eth {
-//   overflow: hidden;
-//   // width: 100%;
-//   width: 400px;
-//   animation: type 4s steps(60, end);
-// }
-
-// @keyframes type{
-//   from { width: 0; }
-// }
+@keyframes opa {
+  0% {
+   opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 // ------ Work ------
 .work-card {
