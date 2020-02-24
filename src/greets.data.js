@@ -82,7 +82,7 @@ export default [
   {
     "locale": "es",
     "country": "Spanish",
-    "string": "Encantada de conocerte!"
+    "string": "Encantado de conocerte!"
   },
   {
     "locale": "et",

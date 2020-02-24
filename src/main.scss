@@ -47,8 +47,8 @@ a {
 
 .intro-extra {
   animation: opacity 6s;
+  color: #333;
   font-size: 0.9rem;
-  font-weight: 900;
   left: 50%;
   margin-top: 5rem;
   position: absolute;
@@ -58,25 +58,20 @@ a {
 
   @media (min-width: 768px) {
     margin-top: 0;
-    transform: translate(0%, -26%) rotate(-23deg);
+    transform: translate(0%, -10%) rotate(-23deg);
     width: auto;
     word-break: normal;
   }
 }
 
 .intro-extra > p {
-  font-family: $old-font-face;
-  font-weight: 500;
-  letter-spacing: 1px;
   margin-bottom: 0.4rem;
-  opacity: 0.8;
 }
+
 .intro-extra-address {
   font-weight: 700;
   font-style: italic;
 }
-
-
 
 // ------ Work ------
 .work-card {
@@ -106,7 +101,7 @@ a {
 }
 
 .work-card-icon {
-  opacity: 1;
+  opacity: 0.3;
   transition: opacity 0.5s ease-in-out;
   height: 100%;
   width: 25%;
@@ -114,11 +109,12 @@ a {
 
   @media (min-width: 768px) {
     width: 20%;
+    opacity: 1;
   }
 }
 
 .work-card-title {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   transition: opacity 0.5s ease-in-out;
   font-size: 1.5rem;
@@ -126,6 +122,7 @@ a {
 
   @media (min-width: 768px) {
     font-size: 2.8vw;
+    opacity: 0;
   }
 }
 
