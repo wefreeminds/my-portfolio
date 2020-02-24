@@ -20,22 +20,44 @@ export const IntroExtra = (props) => {
 
   const loadData = () => {
     sub$.subscribe(({ ethAddress, localization, contriesList }) => {
-      const countryCode = localization.countryCode
-      const city = localization.city
+      const countryCode = localization.country_code
+      const country = localization.country_name
       const flagEmoji = contriesList[countryCode] && contriesList[countryCode].emoji
-      setState({ ethAddress, flagEmoji, city, isComplete: true })
+      setState({ ethAddress, flagEmoji, country, isComplete: true })
     })
   }
 
-  const { isComplete, ethAddress, flagEmoji, city } = state
+  const { isComplete, ethAddress, flagEmoji, country } = state
   return (
     isComplete &&
     <div className="intro-extra">
       <p className="intro-extra-greet">{getGreetings()}</p>
-      <p className="intro-extra-address">{ethAddress}</p>
-      <p>How's the weather in {city} {flagEmoji}?</p>
+      <p>
+        <a className="intro-extra-address" href={`https://etherscan.io/address/${ethAddress}`} target="_blank" rel="noopener noreferrer" >
+          {ethAddress}
+        </a>
+      </p>
+      <p>How's your {getPartOfDay()} in {country} {flagEmoji}?</p>
     </div>
   )
+}
+
+const getPartOfDay = () => {
+  const date = new Date()
+  const hour = date.getHours()
+  const morning = (5 <= hour) && (hour <= 11)
+  const afternoon = (12 <= hour) && (hour <= 17)
+  const evening = (18 <= hour) && (hour <= 23)
+
+  if (morning) {
+    return 'morning'
+  } else if (afternoon) {
+    return 'afternoon'
+  } else if (evening) {
+    return 'evening'
+  } else {
+    return 'night'
+  }
 }
 
 const getGreetings = () => {
@@ -64,7 +86,7 @@ const getEthAddress = () => {
   }
 }
 
-const fetchLocalization = ajax.getJSON('http://ip-api.com/json').pipe(
+const fetchLocalization = ajax.getJSON('https://ipapi.co/json/').pipe(
   catchError(err => of()),
 )
 

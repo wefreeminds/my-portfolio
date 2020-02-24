@@ -37,30 +37,30 @@ export const About = (props) => {
         </ul>
         <p>Are you working on an <strong>Ethereum project, ICO, dApp, need a solidity</strong> developer or consultation?</p>
         <p>Hire me on
-              <a className="about-email" href="mailto:nzbiegien@gmail.com?body=Hi%20there%2C%20I%20was%20browsing%20your%20website%20and%20wanted%20to%20connect.&amp;subject=zbiegien.com">
+              <a className="about-email" href="mailto:nzbiegien@gmail.com?subject=zbiegien.com" rel="noopener noreferrer">
             nzbiegien@gmail.com
               </a>
         </p>
         <p className="about-resume">
           *See my resume on
-              <a href="https:/linkedin.com/in/zbiegien/" target="_blank">
+              <a href="https:/linkedin.com/in/zbiegien/" target="_blank" rel="noopener noreferrer">
             LinkedIn
               </a>
           or
-              <a href="mailto:nzbiegien@gmail.com?body=Hi%20there%2C%20I%20was%20browsing%20your%20website%20and%20wanted%20to%20connect.&amp;subject=zbiegien.com">
+              <a href="mailto:nzbiegien@gmail.com?subject=zbiegien.com">
             email me
               </a>
           to get one.
             </p>
         <div className="about-social">
-          <a href="https:/linkedin.com/in/zbiegien/" target="_blank">
+          <a href="https://linkedin.com/in/zbiegien/" target="_blank" rel="noopener noreferrer">
             <SVGLinkedin className="about-social-icon" />
           </a>
-          <a href="https://github.com/zbiegien" target="_blank">
+          <a href="https://github.com/zbiegien" target="_blank" rel="noopener noreferrer">
             <SVGGithub className="about-social-icon" />
           </a>
-          <a href="mailto:nzbiegien@gmail.com?body=Hi%20there%2C%20I%20was%20browsing%20your%20website%20and%20wanted%20to%20connect.&amp;subject=zbiegien.com">
-            <SVGEmail className="about-social-icon" />
+          <a href="mailto:nzbiegien@gmail.com?subject=zbiegien.com">
+            <SVGEmail className="about-social-icon"/>
           </a>
         </div>
       </div>

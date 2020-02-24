@@ -19,9 +19,9 @@ export const Nav = (props) => {
       </div>
       <nav className={`enavbar-nav ${isNav ? 'enavbar-nav--opened' : ''}`}>
         <ul>
-          <li><span className="enavbar-nav-link" onClick={scrollToWork}>Work</span></li>
-          <li><span className="enavbar-nav-link" onClick={scrollToHire}>Hire</span></li>
-          <li><span className="enavbar-nav-link" onClick={scrollToAbout}>About</span></li>
+          <li><span onClick={scrollToWork}>Work</span></li>
+          <li><span onClick={scrollToHire}>Hire</span></li>
+          <li><span onClick={scrollToAbout}>About</span></li>
         </ul>
       </nav>
     </div>
