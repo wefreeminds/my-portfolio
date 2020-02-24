@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { IntroHidden } from './intro-hidden'
+import { IntroExtra } from './intro-extra'
 
 export const Intro = (props) => {
 
@@ -9,7 +9,7 @@ export const Intro = (props) => {
       <div className="col-md-6 intro">
         <h1 className="intro-text-top">Hi! I'm Nick.</h1>
         <h1>A software engineer who builds the Future with Ethereum.</h1>
-        <IntroHidden />
+        <IntroExtra />
       </div>
     </section>
   )

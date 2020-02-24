@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 import Web3 from 'web3'
 import { forkJoin, from, of } from 'rxjs'
 import { ajax } from 'rxjs/ajax'
-import { map, catchError } from 'rxjs/operators'
+import { catchError } from 'rxjs/operators'
 
-export const IntroHidden = (props) => {
+import greetsData from './greets.data.js'
+
+export const IntroExtra = (props) => {
   const [state, setState] = useState({
     isComplete: false,
     ethAddress: null,
@@ -28,12 +30,19 @@ export const IntroHidden = (props) => {
   const { isComplete, ethAddress, flagEmoji, city } = state
   return (
     isComplete &&
-    <div className="intro-eth">
-      <p>It's nice meeting you!</p>
-      <p className="intro-eth-name">{ethAddress}</p>
+    <div className="intro-extra">
+      <p className="intro-extra-greet">{getGreetings()}</p>
+      <p className="intro-extra-address">{ethAddress}</p>
       <p>How's the weather in {city} {flagEmoji}?</p>
     </div>
   )
+}
+
+const getGreetings = () => {
+  const userLanguage = window.navigator.language || 'en'
+  const userLanguageParsed = userLanguage.substring(0, 2).toLocaleLowerCase()
+  const greet = greetsData.find(language => language.locale === userLanguageParsed)
+  return greet.string
 }
 
 const getEthAddress = () => {
@@ -70,3 +79,4 @@ const sub$ = forkJoin({
   localization: fetchLocalization,
   contriesList: fetchCountriesList,
 })
+
