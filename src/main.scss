@@ -69,11 +69,6 @@ a {
   margin-bottom: 0.4rem;
 }
 
-.intro-extra-address {
-  color: #333;
-  font-style: italic;
-}
-
 // ------ Work ------
 .work-card {
   align-items: center;
@@ -85,7 +80,7 @@ a {
   text-align: center;
 
   &--stock { background-color: #F9CA00; }
-  &--ico { background-color: #00ACED; }
+  &--blockchain { background-color: #00ACED; }
 
   &:hover, &:active {
     .work-card-title {

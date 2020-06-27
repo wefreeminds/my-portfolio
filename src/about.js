@@ -20,25 +20,25 @@ export const About = (props) => {
               <strong> 6+ years experience</strong> in creating quality web systems,
               with a year focused on <strong>decentralized applications (dApps)</strong> run on <strong>Ethereum</strong> blockchain.
             </p>
-        <p>I worked on a spot in tech companies in Poland, Uruguay and Sydney Australia. Currently based in Spain.</p>
-        <p>I am always eager to share my knowledge with others and I am a big fan of
-           the Ethereum blockchain ecosystem, personal development and simplifying peopleʼs lives.
+        <p>I worked on a spot in fin-tech companies in Poland, Uruguay and Sydney Australia.</p>
+        <p>I am always eager to share my knowledge with others and I am a big fan of blockchain, defi, finance, economics, personal development and simplifying peopleʼs lives.
             </p>
         <p><strong>Skills/Highlights:</strong></p>
         <ul>
           <li>JavaScript / TypeScript</li>
           <li>Solidity</li>
           <li>React</li>
-          <li>Redux / Mobx</li>
+          <li>Redux</li>
           <li>Node</li>
           <li>CSS</li>
+          <li>Test-driven development (TDD)</li>
           <li>Functional & Reactive programming</li>
           <li>Distributed systems</li>
         </ul>
-        <p>Are you working on an <strong>Ethereum project, ICO, dApp, need a solidity</strong> developer or consultation?</p>
-        <p>Hire me on
-              <a className="about-email" href="mailto:nzbiegien@gmail.com?subject=zbiegien.com" rel="noopener noreferrer">
-            nzbiegien@gmail.com
+        <p>Are you working on an <strong>Ethereum project, DeFi, ICO, STO, dApp, need a solidity</strong> developer or consultation?</p>
+        <p>Hire me on{''}
+              <a className="about-email" href="mailto:nick@deploy.at?subject=deploy.at" rel="noopener noreferrer">
+            nick@deploy.at
               </a>
         </p>
         <p className="about-resume">
@@ -47,7 +47,7 @@ export const About = (props) => {
             LinkedIn
               </a>
           or
-              <a href="mailto:nzbiegien@gmail.com?subject=zbiegien.com">
+              <a href="mailto:nick@deploy.at?subject=deploy.at">
             email me
               </a>
           to get one.
@@ -56,10 +56,10 @@ export const About = (props) => {
           <a href="https://linkedin.com/in/zbiegien/" target="_blank" rel="noopener noreferrer">
             <SVGLinkedin className="about-social-icon" />
           </a>
-          <a href="https://github.com/zbiegien" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/deployAt" target="_blank" rel="noopener noreferrer">
             <SVGGithub className="about-social-icon" />
           </a>
-          <a href="mailto:nzbiegien@gmail.com?subject=zbiegien.com">
+          <a href="mailto:nick@deploy.at?subject=deploy.at">
             <SVGEmail className="about-social-icon"/>
           </a>
         </div>
