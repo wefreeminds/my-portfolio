@@ -1,7 +1,7 @@
 {
-  "name": "zbiegien-portfolio",
-  "description": "portfolio",
-  "author": "zbiegien <nzbiegien@gmail.com>",
+  "name": "portfolio",
+  "description": "Nick Zbiegien's portfolio",
+  "author": "Nick Zbiegien",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

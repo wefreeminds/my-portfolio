@@ -35,7 +35,7 @@ export const About = (props) => {
           <li>Functional & Reactive programming</li>
           <li>Distributed systems</li>
         </ul>
-        <p>Are you working on an <strong>Ethereum project, DeFi, ICO, STO, dApp, need a solidity</strong> developer or consultation?</p>
+        <p>Are you working on an <strong>Ethereum project, DeFi, IPFS, ICO, STO, dApp, need a solidity</strong> developer or consultation?</p>
         <p>Hire me on{''}
               <a className="about-email" href="mailto:nick@deploy.at?subject=deploy.at" rel="noopener noreferrer">
             nick@deploy.at
