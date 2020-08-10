@@ -79,8 +79,10 @@ a {
   justify-content: center;
   text-align: center;
 
-  &--stock { background-color: #F9CA00; }
-  &--blockchain { background-color: #00ACED; }
+  &--atomik { background-color: #00ACED; }
+  &--hackfs { background-color: #F9CA00; }
+  &--stock { background-color: #6b40af; }
+  &--blockchain { background-color: #d741d3; }
 
   &:hover, &:active {
     .work-card-title {

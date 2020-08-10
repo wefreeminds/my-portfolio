@@ -25,7 +25,8 @@ My portfolio website. Welcome! :)
 * Identicon.js
 * Web3
 * Sass
-* Netlify
+* IPFS (fleek.co hosting)
+* Cloudflare
 * Mobile friendly
 
 ## Project Tree
