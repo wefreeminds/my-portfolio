@@ -43,7 +43,7 @@ export const About = (props) => {
         </p>
         <p className="about-resume">
           *See my resume on
-              <a href="https:/linkedin.com/in/zbiegien/" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/zbiegien/" target="_blank" rel="noopener noreferrer">
             LinkedIn
               </a>
           or
@@ -56,7 +56,7 @@ export const About = (props) => {
           <a href="https://linkedin.com/in/zbiegien/" target="_blank" rel="noopener noreferrer">
             <SVGLinkedin className="about-social-icon" />
           </a>
-          <a href="https://github.com/deployAt" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/deployAt/" target="_blank" rel="noopener noreferrer">
             <SVGGithub className="about-social-icon" />
           </a>
           <a href="mailto:nick@deploy.at?subject=deploy.at">
