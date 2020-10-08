@@ -20,7 +20,7 @@ export const Work = (props) => {
       </div>
 
       <div className="col-md-6 pr-0 pl-0">
-        <a href="https://github.com/atomiklabs/defuma" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/wefreeminds" target="_blank" rel="noopener noreferrer">
           <div className="work-card work-card--hackfs">
             <SVGHackFS className="work-card-icon" />
             <h3 className="work-card-title">HackFS Hackathon</h3>
@@ -29,7 +29,7 @@ export const Work = (props) => {
       </div>
 
       <div className="col-md-6 pr-0 pl-0">
-        <a href="https://github.com/deployAt/crypto-exchange" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/wefreeminds/crypto-exchange" target="_blank" rel="noopener noreferrer">
           <div className="work-card work-card--stock">
             <SVGStock className="work-card-icon" />
             <h3 className="work-card-title">Crypto Exchange</h3>
@@ -38,7 +38,7 @@ export const Work = (props) => {
       </div>
 
       <div className="col-md-6 pr-0 pl-0">
-        <a href="https://github.com/deployAt/blockchain" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/wefreeminds/blockchain" target="_blank" rel="noopener noreferrer">
           <div className="work-card work-card--blockchain">
             <SVGBlockchain className="work-card-icon" />
             <h3 className="work-card-title">Private Blockchain</h3>
