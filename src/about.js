@@ -15,17 +15,16 @@ export const About = (props) => {
         <div className="about-profile">
           <img src={IMGProfile} alt="profile" className="about-profile-img" />
         </div>
-        <p>Hello! I am Nick Zbiegien. I am a software engineer with a master of engineering
-          in computer science and
-              <strong> 6+ years experience</strong> in creating quality web systems,
-              with a year focused on <strong>decentralized applications (dApps)</strong> run on <strong>Ethereum</strong> blockchain.
+        <p>Hello! I am Israel Wilson. I am a blockchain consultant with a background in marketing and business development.
+              <strong> 7+ years experience</strong> in upgrading business systems,
+              with a 5 years focused on <strong>decentralized applications (dApps)</strong> run on <strong>Ethereum</strong> blockchain.
             </p>
-        <p>I worked on a spot in fin-tech companies in Poland, Uruguay and Sydney Australia.</p>
-        <p>I am always eager to share my knowledge with others and I am a big fan of blockchain, defi, finance, economics, personal development and simplifying peopleʼs lives.
+        <p>I've previously had great results with traditional companies I look forward to adding blackchain companies to my portfolio.</p>
+        <p>I am always eager to share my knowledge with others and I am a big fan of blockchain, defi, finance, economics, personal development, and media technology.
             </p>
         <p><strong>Skills/Highlights:</strong></p>
         <ul>
-          <li>JavaScript / TypeScript</li>
+          <li>Biz Dev/Marketing</li>
           <li>Solidity</li>
           <li>React</li>
           <li>Redux</li>
@@ -37,29 +36,29 @@ export const About = (props) => {
         </ul>
         <p>Are you working on an <strong>Ethereum project, DeFi, IPFS, ICO, STO, dApp, need a solidity</strong> developer or consultation?</p>
         <p>Hire me on{''}
-              <a className="about-email" href="mailto:nick@deploy.at?subject=deploy.at" rel="noopener noreferrer">
-            nick@deploy.at
+              <a className="about-email" href="mailto:israel.wilson@cryptoisreal.org?subject=cryptoisreal.org" rel="noopener noreferrer">
+            israel.wilson@cryptoisreal.org
               </a>
         </p>
         <p className="about-resume">
           *See my resume on
-              <a href="https://linkedin.com/in/zbiegien/" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/iswilson/" target="_blank" rel="noopener noreferrer">
             LinkedIn
               </a>
           or
-              <a href="mailto:nick@deploy.at?subject=deploy.at">
+              <a href="mailto:israel.wilson@cryptoisreal.org?subject=cryptoisreal.org">
             email me
               </a>
           to get one.
             </p>
         <div className="about-social">
-          <a href="https://linkedin.com/in/zbiegien/" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/iswilson/" target="_blank" rel="noopener noreferrer">
             <SVGLinkedin className="about-social-icon" />
           </a>
-          <a href="https://github.com/deployAt/" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/wefreeminds/" target="_blank" rel="noopener noreferrer">
             <SVGGithub className="about-social-icon" />
           </a>
-          <a href="mailto:nick@deploy.at?subject=deploy.at">
+          <a href="mailto:israel.wilson@cryptoisreal.org?subject=cryptoisreal.org">
             <SVGEmail className="about-social-icon"/>
           </a>
         </div>
