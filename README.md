@@ -4,9 +4,7 @@ My portfolio website. Welcome! :)
 
 ## Live
 
-* https://deploy.at
-
-<img src="https://i.ibb.co/QbvjYCj/Screen-Shot-2020-07-06-at-20-22-29.png" width="50%">
+* https://cryptoisreal.org
 
 ## Run Scripts
 ```json
